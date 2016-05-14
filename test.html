@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    <link href="https://creator.ionic.io/api/v1/getcss?app_id=7058c24d4206&amp;v=117&fontfix=1" rel="stylesheet">
+    https://creator.ionic.io/
+       
+    <link href="https://creator.ionic.io/css/share-frame.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="https://creator.ionic.io/lib/ionic/release/js/ionic.bundle.js"></script>
+    <script src="https://creator.ionic.io/lib/ionicuirouter/ionicUIRouter.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:400,300,500,600,700|Crimson+Text:400,400italic,600,600italic,700,700italic|Lora:400,400italic,700,700italic|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Noto+Sans:400,400italic,700,700italic|Lato:400,100,100italic,300italic,300,400italic,700,700italic,900,900italic|Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+
+    <link id='android-default-font' rel='text/css' href='https://creator.ionic.io/css/android-default-font.css'>
+    <link id='ios-default-font' rel='text/css' href='https://creator.ionic.io/css/ios-default-font.css'>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+     <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px !important;
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+    </style>
+
+
+    <script>
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+// 'starter.services' is found in services.js
+// 'starter.controllers' is found in controllers.js
+angular.module('app', ['ionic', 'app.controllers', 'ionicUIRouter'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      cordova.plugins.Keyboard.disableScroll(true);
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
+
+  
+
+  .state('tabsController.match', {
+    url: '/1',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/match.html',
+        controller: 'matchCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.team', {
+    url: '/3',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/team.html',
+        controller: 'teamCtrl'
+      }
+    }
+  })
+
+  .state('tabsController', {
+    url: '/page1',
+    templateUrl: 'templates/tabsController.html',
+    abstract:true
+  })
+
+  .state('tabsController.team2', {
+    url: '/team1',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/team2.html',
+        controller: 'team2Ctrl'
+      }
+    }
+  })
+
+  .state('tabsController.standing', {
+    url: '/league',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/standing.html',
+        controller: 'standingCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/page1/1')
+
+  
+
+})
+
+angular.module('app.controllers', [])
+  
+.controller('matchCtrl', function($scope) {
+
+})
+   
+.controller('teamCtrl', function($scope) {
+
+})
+         
+.controller('team2Ctrl', function($scope) {
+
+})
+   
+.controller('standingCtrl', function($scope) {
+
+})
+ 
+
+
+    </script>
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+    <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-positive">
+                <ion-nav-back-button></ion-nav-back-button>
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" id="side-menu21">
+            <ion-header-bar class="bar-positive">
+                <div class="title">Menu</div>
+            </ion-header-bar>
+            <ion-content padding="false" class="side-menu-left has-header">
+                <div class="" data-componentid="image1">
+                    <img src="https://s3.amazonaws.com/ionic-io-static/vhiAQA2YSRGNU2bPXxX7_material__background.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <ion-list id="menu-list1" class=" " data-componentid="list1">
+                    <ion-item class="item-icon-left positive  " id="menu-list-item1" ui-sref="tabsController.match" menu-close="" data-componentid="list-item1">
+                        <i class="icon ion-ios-football"></i>Match</ion-item>
+                    <ion-item class="item-icon-left positive  " id="menu-list-item5" ui-sref="tabsController.standing" menu-close="" data-componentid="list-item5">
+                        <i class="icon ion-ios-pulse-strong"></i>Standing</ion-item>
+                    <ion-item class="item-icon-left positive  " id="menu-list-item6" ui-sref="tabsController.team2" menu-close="" data-componentid="list-item6">
+                        <i class="icon ion-tshirt"></i>Team</ion-item>
+                    <ion-item class="item-icon-left positive  " id="menu-list-item7" ui-sref="tabsController.team" menu-close="" data-componentid="list-item7">
+                        <i class="icon ion-person-stalker"></i>Player</ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</div>
+<script id="templates/match.html" type="text/ng-template">
+<ion-view title="Match" id="page2" class=" ">
+    <ion-content padding="false" class="has-header">
+        <ion-list id="match-list8" class=" ">
+            <ion-item class="item-divider " id="match-list-item-divider4">England Premier League</ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 320px; height: 4px;"></div>
+        <div>
+            <div class="list">
+                <div class="row">
+                    <div class="col .col-25">Arsenal</div>
+                    <div class="col .col-20">1</div>
+                    <div class="col .col-20">0</div>
+                    <div class="col .col-25">Man UTD</div>
+                    <div class="col .col-9">Ft</div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer" style="width: 320px; height: 7px;"></div>
+        <div>
+            <div class="row">
+                <div class="col .col-40">Everton</div>
+                <div class="col .col-10">1</div>
+                <div class="col .col-10">0</div>
+                <div class="col .col-40">Liverpool</div>
+                <div class="col .col-5">Ft</div>
+            </div>
+        </div>
+        <div class="spacer" style="width: 320px; height: 12px;"></div>
+        <ion-list id="match-list10" class=" ">
+            <ion-item class="item-divider " id="match-list-item-divider5">Spain La Liga</ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 320px; height: 12px;"></div>
+        <div>
+            <div class="ion-item">Time 10-1-16</div>
+            <div class="list">
+                <div class="row">
+                    <div class="col .col-25">Arsenal</div>
+                    <div class="col .col-20">1</div>
+                    <div class="col .col-20">0</div>
+                    <div class="col .col-25">Man UTD</div>
+                    <div class="col .col-9">Ft</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view></script>
+<script id="templates/team.html" type="text/ng-template">
+<ion-view title="team" id="page4" class=" ">
+    <ion-content padding="false" class="has-header">
+        <ion-list id="team-list6" class=" ">
+            <ion-item class="item-thumbnail-left positive  " id="team-list-item18">
+                <img src="https://s3.amazonaws.com/ionic-io-static/Dp4OuZpVR1KxyyPhD80r_arsenal.png">
+                <h2positive>Arsenal
+                    <p>England Premier League</p>
+                </h2positive>
+            </ion-item>
+        </ion-list>
+        <div id="team-button-bar2" class=" button-bar ">
+            <button id="team-button4" style="border-radius:0px 0px 0px 0px;" class=" button button-positive button-large button-block ">Fixture</button>
+            <button id="team-button5" style="border-radius:0px 0px 0px 0px;" class=" button button-positive button-large button-block ">Player</button>
+        </div>
+        <ion-list id="team-list5" class=" ">
+            <ion-item class="item-icon-left  " id="team-list-item19">
+                <i class="icon ion-ionic"></i>Item</ion-item>
+            <ion-item class="item-avatar balanced  " id="team-list-item21">
+                <img src="https://s3.amazonaws.com/ionic-io-static/OOU5JBjCTuOQ67jPmZbx_AlexisSanchez.png">
+                <h2balanced>Sanchez</h2balanced>
+            </ion-item>
+            <ion-item class="item-avatar balanced  " id="team-list-item22">
+                <img src="https://s3.amazonaws.com/ionic-io-static/woG0NbuSLiNASm6LiRwY_MesutOzil.png">
+                <h2balanced>Ozil</h2balanced>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view></script>
+<script id="templates/tabsController.html" type="text/ng-template">
+<ion-view title="Tabs Controller" id="page1" class=" ">
+    <ion-tabs class="tabs-stable tabs-icon-top " id="tabsController-tabs1">
+        <ion-tab title="Match" icon="ion-ios-football" href="#/page1/1" id="tabsController-tab1" class=" ">
+            <ion-nav-view name="tab1"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Standing" icon="ion-ios-grid-view" href="#/page1/league" id="tabsController-tab2" class=" ">
+            <ion-nav-view name="tab2"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Team" icon="ion-ios-settings-strong" href="#/page1/team1" id="tabsController-tab3" class=" ">
+            <ion-nav-view name="tab3"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view></script>
+<script id="templates/team2.html" type="text/ng-template">
+<ion-view title="Team" id="page6" class=" ">
+    <ion-content padding="false" class="has-header">
+        <ion-list id="team2-list13" class=" ">
+            <ion-item class="item-avatar assertive  " id="team2-list-item28" ui-sref="tabsController.team">
+                <img src="https://s3.amazonaws.com/ionic-io-static/clSdjOVsQ4uA79yp1smI_arsenal.png">
+                <h2assertive>Arsenal</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item29">
+                <img src="https://s3.amazonaws.com/ionic-io-static/1T85cFcXSYu2yvQnpEmj_Aston_Villa.png">
+                <h2assertive>AstonVilla</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item30">
+                <img src="https://s3.amazonaws.com/ionic-io-static/26222X9nQWqkM1ISOvVP_Bournemouth.png">
+                <h2assertive>Bournemounth</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item31">
+                <img src="https://s3.amazonaws.com/ionic-io-static/Yw996fcJSDyXGwitLDAc_Chelsea.png">
+                <h2assertive>Chelsea</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item32">
+                <img src="https://s3.amazonaws.com/ionic-io-static/rMYdQBwWRB2gNHc9MS6r_Crystal_Palace.png">
+                <h2assertive>Palace</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item33">
+                <img src="https://s3.amazonaws.com/ionic-io-static/yyHoTcpTceBvjGIAEWB4_Everton.png">
+                <h2assertive>Everton</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item34">
+                <img src="https://s3.amazonaws.com/ionic-io-static/lBHXnqhQSKA3ovDnPENK_leicester.png">
+                <h2assertive>Leicester</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item35">
+                <img src="https://s3.amazonaws.com/ionic-io-static/USyQZ4yxTE2hj0lamFQU_Liverpool.png">
+                <h2assertive>Liverpool</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item36">
+                <img src="https://s3.amazonaws.com/ionic-io-static/Y2ObxUGnQb2XahuUa1jS_Manchester_City.png">
+                <h2assertive>Man City</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item37">
+                <img src="https://s3.amazonaws.com/ionic-io-static/kjyjuDMSRZaZ5wrHAGDt_Manchester_United.png">
+                <h2assertive>Manchestrt Unit</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item38">
+                <img src="https://s3.amazonaws.com/ionic-io-static/vA6X9pBESBWiMM1AVWwF_Newcastle.png">
+                <h2assertive>Newcastle</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item39">
+                <img src="https://s3.amazonaws.com/ionic-io-static/fLNTiySZQpWXvhbatJtc_Norwich.png">
+                <h2assertive>Norwich</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item40">
+                <img src="https://s3.amazonaws.com/ionic-io-static/Xny2Vc2ZTnKkWyeI4XE3_Southampton.png">
+                <h2assertive>Southampton</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item41">
+                <img src="https://s3.amazonaws.com/ionic-io-static/cKA356O0SM60GRdSxxUh_Stoke.png">
+                <h2assertive>Stock</h2assertive>
+            </ion-item>
+            <ion-item class="item-avatar assertive  " id="team2-list-item42">
+                <img src="https://s3.amazonaws.com/ionic-io-static/2COwxLDQRa2aGcv12ZnP_Sunderland.png">
+                <h2assertive>Item</h2assertive>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view></script>
+<script id="templates/standing.html" type="text/ng-template">
+<ion-view title="Standing" id="page7" class=" ">
+    <ion-content padding="false" class="has-header">
+        <form id="standing-form1" class="list ">
+            <label class="item item-select " id="standing-select1" name="league">
+                <span class="input-label">Select League</span>
+                <select>
+                    <option>England Premier League</option>
+                    <option>Series A</option>
+                    <option>Laliga</option>
+                    <option>UEFA</option>
+                    <option>Europa</option>
+                </select>
+            </label>
+            <ion-item class="item-avatar  " id="standing-list-item8">
+                <img src="https://s3.amazonaws.com/ionic-io-static/Ote3Zg3iRpeC3jxz3Z7p_leicester.png">
+                <h2>
+                    <div class="row">
+                        <div class="col">Leister</div>
+                        <div class="col">30</div>
+                        <div class="col">19</div>
+                        <div class="col">70</div>
+                    </div>
+                </h2>
+            </ion-item>
+            <ion-item class="item-avatar  " id="standing-list-item9">
+                <img src="https://s3.amazonaws.com/ionic-io-static/BRwzARlyQvahl0xkZsBw_tottenham.png">
+                <h2>
+                    <div class="row">
+                        <div class="col">Leister</div>
+                        <div class="col">30</div>
+                        <div class="col">19</div>
+                        <div class="col">70</div>
+                    </div>
+                </h2>
+            </ion-item>
+            <ion-item class="item-avatar  " id="standing-list-item10">
+                <img src="https://s3.amazonaws.com/ionic-io-static/ewmTAXQ2uNg5wbnfgs4Q_Liverpool.png">
+                <h2>
+                    <div class="row">
+                        <div class="col">Leister</div>
+                        <div class="col">30</div>
+                        <div class="col">16</div>
+                        <div class="col">60</div>
+                    </div>
+                </h2>
+            </ion-item>
+        </form>
+    </ion-content>
+</ion-view></script>
+  </body>
+</html>
